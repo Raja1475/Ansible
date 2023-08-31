@@ -1,8 +1,8 @@
 - name: installing git
   hosts: web_server
+  become: yes
   tasks:
   - name: git instalation
     ansible.builtin.yum:
       name: git
       state: installed
-        
