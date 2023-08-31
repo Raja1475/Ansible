@@ -1,4 +1,3 @@
-vars:
-  name: Kumara
-  age: 29
-  
+name: Kumara
+age: 29
+
