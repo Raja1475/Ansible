@@ -1,0 +1,13 @@
+- name: variables
+  hosts: local host
+  vars_promt:
+  - name: username
+    promt: Enter user name is?
+    private: flase
+  
+  - name: password
+    promt: Enter Password?
+    private: true
+  tasks: printing variables from promt
+    ansible.builtin.debug:
+      msg: login as {{username}}
