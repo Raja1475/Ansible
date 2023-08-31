@@ -3,6 +3,6 @@
   become: yes
   tasks:
   - name: uninstall git
-    ansible.builtin.yum:
+    yum:
       name: git
       state: absent
