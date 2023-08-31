@@ -5,4 +5,4 @@
   tasks:
   - name: Printing varibles
     ansible.builtin.debug:
-    msg: myname is {{name}}, my age is {{age}} years.
+     msg: myname is {{name}}, my age is {{age}} years.
