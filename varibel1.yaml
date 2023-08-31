@@ -6,5 +6,5 @@
     job: kali
   tasks:
   - name: printing Varibles
-    ansible.builtin.deburg:
+    ansible.builtin.debug:
      msg: my name is {{name}}, i am {{age}} old, currently i am not doing any job, that is {{job}}
