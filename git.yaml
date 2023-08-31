@@ -5,4 +5,5 @@
   - name: git instalation
     ansible.builtin.yum:
       name: git
-      state: installed
+      state: absent
+      
