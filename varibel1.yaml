@@ -1,0 +1,10 @@
+- name: printing varibles
+  hosts: web_server
+  vars:
+    name: Kumara
+    age: 29
+    job: kali
+  tasks:
+  - name: printing Varibles
+    ansible.builtin.deburg:
+     msg: my name is {{name}}, i am {{age}} old, currently i am not doing any job, that is {{job}}
