@@ -1,12 +1,12 @@
 - name: variables
   hosts: local host
-  vars_promt:
+  vars_prompt:
   - name: username
-    promt: Enter user name is?
+    prompt: Enter user name is?
     private: flase
   
   - name: password
-    promt: Enter Password?
+    prompt: Enter Password?
     private: true
   tasks:
   - name: printing variables from promt
