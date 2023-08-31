@@ -3,6 +3,5 @@
   become: yes
   tasks:
   - name: uninstall git
-    yum:
-      name: git
-      state: absent
+    shell: yum remove -y git
+     
