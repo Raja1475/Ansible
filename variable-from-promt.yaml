@@ -8,6 +8,6 @@
   - name: password
     promt: Enter Password?
     private: true
-  tasks: printing variables from promt
+- tasks: printing variables from promt
     ansible.builtin.debug:
       msg: login as {{username}}
