@@ -2,8 +2,7 @@
   hosts: web_server
   become: yes
   tasks:
-  - name: git instalation
+  - name: uninstall git
     ansible.builtin.yum:
       name: git
       state: absent
-      
