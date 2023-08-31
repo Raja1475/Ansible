@@ -2,7 +2,6 @@
   hosts: web_server
   tasks:
   - name: instaling inginx
-    ansible.builtin.yum
+    ansible.builtin.yum:
       name: nginx
       state: installed
-      
