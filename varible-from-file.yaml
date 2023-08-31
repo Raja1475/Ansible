@@ -3,5 +3,6 @@
   vars_files:
   - variables_file.yaml
   tasks:
-    ansible.builtin.debug:
+    -name: Printing varibles
+     ansible.builtin.debug:
       msg: myname is {{name}}, my age is {{age}} years.
