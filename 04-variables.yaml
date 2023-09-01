@@ -6,7 +6,7 @@
   tasks:
   - name: printing varibles
     ansible.builtin.debug:
-      masg: name is {{name}}, age {{age}} years
+      msg: name is {{name}}, age {{age}} years
   
   - name: printing varibles from task level
     vars:
