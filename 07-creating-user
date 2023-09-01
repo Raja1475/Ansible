@@ -14,3 +14,7 @@
     ansible.builtin.debug:
       msg: "{{output.rc}}"
 
+  - name: creating user
+    ansible.builtin.user:
+      name: kumara
+    when: output.rc != 0
