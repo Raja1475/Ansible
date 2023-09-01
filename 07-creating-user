@@ -1,0 +1,9 @@
+- name: creating user
+  hosts: localhost
+  tasks:
+  - name: check the user is aleady exist or not
+    ansible.builtin.command: id kumara
+    register: output
+  - name: print the output
+    ansible.builtin.debug:
+      msg: output is {{output}}
