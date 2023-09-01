@@ -5,7 +5,12 @@
     ansible.builtin.command: id kumara
     register: output
     ignore_errors: true
-    
+
   - name: print the output
     ansible.builtin.debug:
       msg: output is {{output}}
+  
+  - name: print exit status
+    ansible.builtin.debug:
+      msg: {{output.rc}}
+
