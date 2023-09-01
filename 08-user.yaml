@@ -7,6 +7,10 @@
 
   - name: check the outpu status
     ansible.builtin.debug:
+      msg: output is "{{output}}"
+
+  - name: check the outpu status
+    ansible.builtin.debug:
       msg: "{{output.rc}}"
   
   - name: create user
