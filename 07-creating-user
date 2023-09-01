@@ -1,20 +1,13 @@
-- name: creating user
+- name: Creating user
   hosts: localhost
   tasks:
-  - name: check the user is aleady exist or not
-    ansible.builtin.command: id kumara
+  - name: to check the user is exist or not
+    ansible.builtin.command: id raja
     register: output
     ignore_errors: true
-
-  - name: print the output
-    ansible.builtin.debug:
-      msg: "output is {{output}}"
   
-  - name: print exit status
-    ansible.builtin.debug:
-      msg: "{{output.rc}}"
-
   - name: creating user
     ansible.builtin.user:
-      name: kumara
-    when: output.rc != 0
+      name: raja
+    when: {{output.rc}} != 1
+    
