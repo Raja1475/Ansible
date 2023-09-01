@@ -16,7 +16,7 @@
 
   
   - name: creating user
-    ansible.builtin.user:
     become: yes
+    ansible.builtin.user:
       name: raja
     when: output.rc != 1
