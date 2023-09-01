@@ -8,7 +8,7 @@
   
   - name: check the output status
     ansible.builtin.debug:
-     msg: {{output}}
+     msg: output is {{output}}
   
   #- name: creating user
    #ansible.builtin.user:
