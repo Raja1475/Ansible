@@ -16,6 +16,6 @@
   
   - name: create user
     ansible.builtin.user:
-      become: yes
+    become: yes
       name: chinna
     when: output.rc != 0
