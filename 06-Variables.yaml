@@ -6,6 +6,6 @@
       AWS: 3
       Linux: 4
   tasks:
-  - name: printing variables:
+  - name: printing variables
     ansible.builtin.debug:
       msg: Experience in devops {{Experiance.devops}} years, Experience in AWS {{Experiance.AWS}} years, Experience in Linux {{Experiance.Linux}} years
