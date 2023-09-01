@@ -2,12 +2,12 @@
   hosts: localhost
   tasks:
   - name: to check the user is exist or not
-    ansible.builtin.command: id raja
+    ansible.builtin.command: id rajitha
     register: output
     ignore_errors: true
   
   - name: creating user
     become: yes
     ansible.builtin.user:
-      name: raja
+      name: rajitha
     when: output.rc != 0
