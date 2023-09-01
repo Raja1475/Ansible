@@ -1,0 +1,7 @@
+- name: variables
+  hosts: localhost
+  tasks:
+  - name: calling variables
+    absible.builtin.debug:
+      msg: name id {{name}}
+      
