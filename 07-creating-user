@@ -10,6 +10,11 @@
     ansible.builtin.debug:
      msg: output is {{output}}
   
+  - name: check the output status
+    ansible.builtin.debug:
+      msg: {{output.rc}}
+
+  
   #- name: creating user
    #ansible.builtin.user:
     #  name: raja
