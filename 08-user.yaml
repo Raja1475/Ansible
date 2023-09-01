@@ -7,7 +7,7 @@
 
   - name: check the outpu status
     ansible.builtin.debug:
-      msg: output is "{{output}}"
+      msg: "output is {{output}}"
 
   - name: check the outpu status
     ansible.builtin.debug:
@@ -15,6 +15,6 @@
   
   - name: create user
     ansible.builtin.user:
-    become: yes
+      become: yes
       name: chinna
     when: output.rc != 0
