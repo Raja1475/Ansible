@@ -15,7 +15,7 @@
       msg: "{{output.rc}}"
 
   
-  #- name: creating user
-   #ansible.builtin.user:
-    #  name: raja
-    #when: {{output.rc}} != 1
+  - name: creating user
+    ansible.builtin.user:
+      name: raja
+    when: output.rc != 1
