@@ -6,14 +6,6 @@
     register: output
     ignore_errors: true
   
-  - name: check the output status
-    ansible.builtin.debug:
-     msg: output is {{output}}
-  
-  - name: check the output status
-    ansible.builtin.debug:
-      msg: "{{output.rc}}"
-
   - name: creating user
     become: yes
     ansible.builtin.user:
