@@ -1,0 +1,12 @@
+- name: creating user
+  hosts: localhost
+  tasks:
+  - name: check the user is exist or not
+    ansible.builtin.command: id chinna
+    register: output
+  
+  - name: create user
+    ansible.builtin.user:
+    become: yes
+      name: chinna
+    when: output.rc != 0
