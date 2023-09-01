@@ -1,0 +1,16 @@
+- name: variables
+  hosts: localhost
+  vars:
+  - name: Kumara
+    age: 29
+  tasks:
+  - name: printing varibles
+    ansible.builtin.debug:
+      masg: name is {{name}}, age {{age}} years
+  
+  - name: printing varibles from task level
+    vars:
+    - name: Pardhu
+      age: 33
+    ansible.builtin.debug:
+      msg: name is {{name}}, age {{age}} years
