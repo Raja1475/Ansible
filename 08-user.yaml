@@ -4,6 +4,10 @@
   - name: check the user is exist or not
     ansible.builtin.command: id chinna
     register: output
+
+  - name: check the outpu status
+    ansible.builtin.debug:
+      msg: "{{output.rc}}"
   
   - name: create user
     ansible.builtin.user:
