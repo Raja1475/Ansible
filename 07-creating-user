@@ -6,8 +6,11 @@
     register: output
     ignore_errors: true
   
-  - name: creating user
-    ansible.builtin.user:
-      name: raja
-    when: {{output.rc}} != 1
-    
+  - name: check the output status
+    ansible.builtin.debug:
+     msg: {{output}}
+  
+  #- name: creating user
+   #ansible.builtin.user:
+    #  name: raja
+    #when: {{output.rc}} != 1
