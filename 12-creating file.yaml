@@ -9,3 +9,9 @@
   - name: printing output
     ansible.builtin.debug:
       msg: output is "{{output}}"
+
+  - name: creating file
+    ansible.builtin.file:
+      path: /etc/ansible/raja/file1.txt
+      state: file
+    when: output.stat.exists == False
