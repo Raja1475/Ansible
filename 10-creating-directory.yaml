@@ -12,8 +12,8 @@
   
   - name: directory status
     ansible.builtin.debug:
-      msg: directory not exist
-    when: output.stat.exists == False
+      msg: directory exist
+    when: output.stat.exists == True
   
   - name: creating directory
     ansible.builtin.file:
