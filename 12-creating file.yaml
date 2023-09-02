@@ -1,0 +1,11 @@
+- name: files
+  hosts: localhost
+  tasks:
+  - name: check the file exist or not
+    ansible.builtin.stat:
+      path: /etc/ansible/raja/file1.txt
+    register: output
+
+  - name: printing output
+    ansible.builtin.debug:
+      msg: output is "{{output}}"
