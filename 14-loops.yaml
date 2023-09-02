@@ -1,5 +1,5 @@
 - name: instaling packages
-  hosts: web_hosts
+  hosts: web_server
   tasks:
   - name: install packages
     become: yes
