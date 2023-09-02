@@ -2,6 +2,7 @@
   hosts: web_hosts
   tasks:
   - name: install packages
+    become: yes
     ansible.builtin.yum:
       name: "{{item}}""
       state: installed
