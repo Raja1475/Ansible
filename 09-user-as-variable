@@ -1,0 +1,13 @@
+- name: creating user
+  hosts: localhost
+  vars:
+    name: Kumara
+  tasks:
+  - name: check user exit or not
+    ansible.builtin.command: id {{name}}
+    register: output
+    ignore_errors: yes
+
+  - name: printing output
+    ansible.builtin.debug:
+      masg: output is {{output}}
