@@ -1,0 +1,11 @@
+- name: directory
+  hosts: localhost
+  tasks:
+  - name: directory is exist or not
+    ansible.builtin.stat:
+      path: /etc/ansible
+    register: output
+
+  - name: printing output
+     ansible.builtin.debug:
+      msg: output is {{output}}
