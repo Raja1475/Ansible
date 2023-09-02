@@ -13,5 +13,5 @@
   - name: creating file
     ansible.builtin.file:
       path: /etc/ansible/raja/file1.txt
-      state: file
+      state: touch
     when: output.stat.exists == False
