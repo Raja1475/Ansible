@@ -11,3 +11,14 @@
   - name: printing output
     ansible.builtin.debug:
       msg: output is {{output}}
+  
+  - name: creating user
+    become: yes
+    ansible.builtin.user:
+      name: {{name}}
+    when: output.rc != 0
+
+  - name: user already exist
+    ansible.builtin.debug:
+      msg: "User {{name}} already exist"
+    when: output.rc == 0
