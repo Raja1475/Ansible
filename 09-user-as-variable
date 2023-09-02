@@ -1,8 +1,10 @@
 - name: creating user
   hosts: localhost
   vars_prompt:
-  - name: username
-    prompt: "Enter the username:"
+  - name: name
+    prompt: "Enter the name:"
+    private: flase
+    
   tasks:
   - name: check user exit or not
     ansible.builtin.command: id {{name}}
