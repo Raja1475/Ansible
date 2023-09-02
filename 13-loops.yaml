@@ -1,0 +1,10 @@
+- name: loop
+  hosts: web_server
+  tasks:
+  - name: printing name using loops
+    ansible.builtin.debug:
+      msg: name of the person {{item}}
+    loop:
+    - kumara
+    - Raja
+    - Chinna
