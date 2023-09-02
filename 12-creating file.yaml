@@ -9,4 +9,3 @@
   - name: printing output
     ansible.builtin.debug:
       msg: output is "{{output}}"
-      msg: file not exist
