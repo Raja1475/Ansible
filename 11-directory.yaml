@@ -1,0 +1,12 @@
+- name: directory
+  hosts: localhost
+  tasks:
+  - name: check directory exist or not
+    ansible.builtin.stat:
+      path: /etc/ansible/raja
+    register: output
+
+  - name: printing the output
+    ansible.builtin.debug:
+      msg: output is "{{output}}"
+      
