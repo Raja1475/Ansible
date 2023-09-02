@@ -2,7 +2,7 @@
   hosts: localhost
   vars_prompt:
   - name: username
-    Prompt: "Enter the username:"
+    prompt: "Enter the username:"
   tasks:
   - name: check user exit or not
     ansible.builtin.command: id {{name}}
