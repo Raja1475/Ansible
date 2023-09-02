@@ -18,4 +18,5 @@
   - name: creating directory
     ansible.builtin.file:
       path: /etc/ansible/kumara
+      state: directory
     when: output.stat.exists == False
