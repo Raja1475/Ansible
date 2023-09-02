@@ -10,4 +10,4 @@
 
   - name: printing output
     ansible.builtin.debug:
-      masg: output is {{output}}
+      msg: output is {{output}}
