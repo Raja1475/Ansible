@@ -9,4 +9,10 @@
   - name: printing the output
     ansible.builtin.debug:
       msg: output is "{{output}}"
-      
+  
+  - name: crating directoy
+    ansible.builtin.file:
+      path: /etc/ansible/raja
+      state: directory
+    when: output.stat.exists == False
+    
