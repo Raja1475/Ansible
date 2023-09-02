@@ -8,5 +8,5 @@
       state: installed
     loop:
     - postfix
-    - python
+    - python3
     - php
