@@ -1,7 +1,7 @@
 - name: creating user
   hosts: localhost
   vars:
-    name: Kumara
+    name: Pooja
   tasks:
   - name: check user exit or not
     ansible.builtin.command: id {{name}}
