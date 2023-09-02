@@ -15,7 +15,7 @@
   - name: creating user
     become: yes
     ansible.builtin.user:
-      name: {{name}}
+      name: "{{name}}"
     when: output.rc != 0
 
   - name: user already exist
