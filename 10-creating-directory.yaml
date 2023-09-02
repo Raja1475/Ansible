@@ -14,3 +14,8 @@
     ansible.builtin.debug:
       msg: directory not exist
     when: output.stat.exists == False
+  
+  - name: creating directory
+    ansible.builtin.file:
+      path: /etc/ansible/kumara
+    when: output.stat.exists == False
