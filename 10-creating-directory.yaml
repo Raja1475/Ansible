@@ -13,4 +13,4 @@
   - name: directory status
     ansible.builtin.debug:
       msg: directory not exist
-    when: output.stat.exists == flase
+    when: output.stat.exists == False
