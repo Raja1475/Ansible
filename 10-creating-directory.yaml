@@ -3,7 +3,7 @@
   tasks:
   - name: directory is exist or not
     ansible.builtin.stat:
-      path: /etc/ansible
+      path: /etc/ansible/kumara
     register: output
 
   - name: printing output
