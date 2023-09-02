@@ -9,3 +9,8 @@
   - name: printing output
     ansible.builtin.debug:
       msg: output is "{{output}}"
+  
+  - name: directory status
+    ansible.builtin.debug:
+      msg: directory not exist
+    when: output.stat.exists == flase
