@@ -3,8 +3,8 @@
   vars_prompt:
   - name: name
     prompt: "Enter the name:"
-    private: flase
-    
+    private: false
+
   tasks:
   - name: check user exit or not
     ansible.builtin.command: id {{name}}
