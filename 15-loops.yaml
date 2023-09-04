@@ -3,10 +3,10 @@
   tasks:
   - name: installing packages
     ansible.builtin.yum:
-      name: {{item}}
-      state: {{item.state}}
+      name: "{{item}}"
+      state: "{{item.state}}"
     loop:
     - {name: 'nginx', state: 'absent'}
     - {name: 'python3', state: 'absent'}
     - {name: 'git', state: 'installed'}
-    
+
