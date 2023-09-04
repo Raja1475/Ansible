@@ -4,7 +4,7 @@
   - name: installing packages
     become: yes
     ansible.builtin.yum:
-      name: "{{item}}"
+      name: "{{item.name}}"
       state: "{{item.state}}"
     loop:
       - {name: 'nginx', state: 'absent'}
