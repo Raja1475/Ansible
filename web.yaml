@@ -31,5 +31,5 @@
   - name: unzip files
     ansible.builtin.unarchive:
       src: /temp
-    dest: /usr/share/nginx/html
+      dest: /usr/share/nginx/html
     
