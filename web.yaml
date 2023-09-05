@@ -33,4 +33,10 @@
       src: /temp
       dest: /usr/share/nginx/html
       remote_src: yes
+
+  - name: reverse proxy config
+     ansible.builtin.copy:
+      src: roboshop.conf
+      dest: /etc/nginx/default.d
+      remote_src: yes
     
