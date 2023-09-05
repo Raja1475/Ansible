@@ -23,7 +23,7 @@
   - name: check directory is exist or not
     ansible.builtin.stat:
       path: /app
-    register: ourput1
+    register: output1
 
   - name: creating directory
     ansible.builtin.file:
