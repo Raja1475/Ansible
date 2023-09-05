@@ -20,7 +20,7 @@
 
   - name: creating directory
     ansible.builtin.file:
-      path: /usr/share/nginx/htm
+      path: /usr/share/nginx/html
       state: directory
 
   - name: downloading package
