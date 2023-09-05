@@ -73,8 +73,9 @@
       name: mongodb-org-shell
       state: installed
 
-  - name: loading scema to mongodb
+  - name: load catalogue data
     ansible.builtin.command: mongo --host 172.31.95.215 < /app/schema/catalogue.js
+
 
   - name: restart catalouge
     ansible.builtin.service:
