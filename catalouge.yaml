@@ -34,12 +34,12 @@
   - name: downloading artifact
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
-      dest: /temp
+      dest: /tmp
       
 
   - name: unarchive
     ansible.builtin.unarchive:
-      source: /temp/catalogue.zip
+      source: /tmp/catalogue.zip
       dest: /app
       remote_src: yes
   
