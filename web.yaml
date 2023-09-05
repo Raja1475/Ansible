@@ -37,6 +37,6 @@
   - name: reverse proxy config
      ansible.builtin.copy:
        src: roboshop.conf
-       dest: /etc/nginx/default.d
+       dest: /etc/nginx/default.d/roboshop.conf
        remote_src: yes
     
