@@ -20,8 +20,8 @@ tasks:
 
 - name: creating directory
   ansible.builtin.file:
-   path: /usr/share/nginx/htm
-   state: directory
+    path: /usr/share/nginx/htm
+    state: directory
 
 - name: downloading package
   ansible.builtin.get_url:
