@@ -74,7 +74,7 @@
       state: installed
 
   - name: loading scema to mongodb
-    ansible.builtin.command: mongo --host 172.31.95.215 </app/schema/catalogue.js
+    ansible.builtin.command: mongo --host 172.31.95.215 < /app/schema/catalogue.js
 
   - name: restart catalouge
     ansible.builtin.service:
