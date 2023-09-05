@@ -32,4 +32,5 @@
     ansible.builtin.unarchive:
       src: /temp
       dest: /usr/share/nginx/html
+      remote_src: yes
     
