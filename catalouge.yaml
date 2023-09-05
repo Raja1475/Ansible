@@ -55,7 +55,7 @@
     
   - name: demon-reload
     ansible.builtin.systemd:
-      demon_reload: true
+      daemon_reload: true
 
   - name: start and enable catalouge
     ansible.builtin.service:
