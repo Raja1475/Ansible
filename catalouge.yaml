@@ -35,6 +35,7 @@
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip
       dest: /temp
+      remote_src: yes
 
   - name: unarchive
     ansible.builtin.unarchive:
